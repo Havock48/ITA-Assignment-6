@@ -1,0 +1,98 @@
+/* Znam da ovi fontovi mogu u jednu liniju :) */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+/* Nije bilo potrebe za ovim varijablama ali eto da se iskoriste kao vjezba :) */
+$dark-color: #111;
+$b-radius: 6px;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(240, 240, 240);
+    margin: 0 20px;
+}
+
+.container {
+    margin: 0 auto;
+    position: relative;
+    max-width: 1200px;
+}
+
+header {
+    h1 {
+        color: $dark-color;
+        margin: 40px 0;
+        font-family: Raleway;
+        font-weight: normal;
+    }
+
+    .boxes {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: 40px;
+    }
+
+    .boxes {
+        .box {
+            width: 100%;
+            background-color: #6ba2d9ce;
+            border-radius: $b-radius;
+            box-shadow: 0px 0px 7px -5px;
+        }
+
+        .box {
+            img {
+                width: 100%;
+            }
+        
+            p {
+                background-color: #f9f9f9;
+                color: $dark-color;
+                text-align: center;
+                padding: 10px;
+                font-family: Roboto;
+                font-size: 13px;
+                border-bottom-left-radius: $b-radius;
+                border-bottom-right-radius: $b-radius;
+            }
+        }
+    }
+}
+
+section {
+    p {
+        font-family: Montserrat;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 1.9;
+        color: $dark-color;
+        margin: 50px 0;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    body {
+        margin: 40px;
+    }
+    header {
+        .boxes {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    header {
+        h1 {
+            text-align: center;
+        }
+        .boxes {
+            grid-template-columns: 1fr;
+        }
+    }
+}

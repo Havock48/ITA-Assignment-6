@@ -1,0 +1,80 @@
+/* Znam da ovi fontovi mogu u jednu liniju :) */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+/* Nije bilo potrebe za ovim varijablama ali eto da se iskoriste kao vjezba :) */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f0f0f0;
+  margin: 0 20px;
+}
+
+.container {
+  margin: 0 auto;
+  position: relative;
+  max-width: 1200px;
+}
+
+header h1 {
+  color: #111;
+  margin: 40px 0;
+  font-family: Raleway;
+  font-weight: normal;
+}
+header .boxes {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 40px;
+}
+header .boxes .box {
+  width: 100%;
+  background-color: #6ba2d9ce;
+  border-radius: 6px;
+  box-shadow: 0px 0px 7px -5px;
+}
+header .boxes .box img {
+  width: 100%;
+}
+header .boxes .box p {
+  background-color: #f9f9f9;
+  color: #111;
+  text-align: center;
+  padding: 10px;
+  font-family: Roboto;
+  font-size: 13px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+section p {
+  font-family: Montserrat;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.9;
+  color: #111;
+  margin: 50px 0;
+}
+
+@media screen and (max-width: 1024px) {
+  body {
+    margin: 40px;
+  }
+
+  header .boxes {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 500px) {
+  header h1 {
+    text-align: center;
+  }
+  header .boxes {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
